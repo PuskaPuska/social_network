@@ -1,0 +1,35 @@
+
+<mat-card class="page-content">
+  <mat-card-header>
+    <mat-card-title>{{user.firstName}} {{user.lastName}}</mat-card-title>
+    <mat-card-subtitle>{{user.id}}:{{user.login}}</mat-card-subtitle>
+  </mat-card-header>
+  <div class="profile-userpic">
+    <img src="https://avatarfiles.alphacoders.com/442/44217.jpg" class="img-responsive">
+  </div>
+  <mat-divider></mat-divider>
+  <mat-card-actions align="center">
+    <button mat-raised-button color="accent" *ngIf="!user.loggedIn" (click)="addFriend(user.id)" [disabled]="user.friend">Add to friends</button>
+    <button mat-raised-button color="accent" (click)="showFriends()">Show friends</button>
+  </mat-card-actions>
+  <mat-card-content>
+    <mat-list>
+      <div mat-subheader>User info</div>
+      <mat-list-item>
+        <div>Age: </div>
+        <div>{{user.age}}</div>
+      </mat-list-item>
+      <mat-list-item>
+        <div>Interests: </div>
+        <div>{{user.interest}}</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <hr>
+  <app-wall [userId]="user.id"></app-wall>
+</mat-card>
+
+<!-- SIDEBAR USERPIC -->
+
+
+

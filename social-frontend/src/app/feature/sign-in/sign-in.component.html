@@ -1,0 +1,26 @@
+<div class="signin-content">
+  <mat-card>
+    <mat-card-content>
+      <h1>AY</h1>
+      <form class="vertical-container" #mainForm="ngForm">
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input autocomplete="username" matInput placeholder="Логин" name="login" [(ngModel)]="login" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input autocomplete="current-password" matInput placeholder="Пароль"
+                 (keyup.enter)="doSignin($event, mainForm)"
+                 name="password" type="password" [(ngModel)]="password" required>
+        </mat-form-field>
+      </form>
+      <div>
+        <button mat-raised-button color="accent" (click)="doSignin($event, mainForm)">Sign In</button>
+        &nbsp;
+        <button mat-raised-button color="accent" (click)="doSignUp()">Sign Up</button>
+      </div>
+      <p>{{error}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

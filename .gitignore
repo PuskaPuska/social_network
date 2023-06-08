@@ -1,0 +1,54 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/.vscode
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
+######################
+# Node
+######################
+/node/
+dist/
+node_tmp/
+node_modules/
+npm-debug.log.*
+/.awcache/*
+/.cache-loader/*
+
+# Project specific
+env-var.properties
+/in-memory-tarantool/mysql-master/data/
+/in-memory-tarantool/tarantool/data/
+/clickhouse/clickhouse-server/data/
+/clickhouse/mysql-master/data/
+/clickhouse/kittenhouse/data/
+/rabbit-redis/mysql/data/
+/rabbit-redis/redis/data/
+/rabbit-redis/rabbitmq/data/

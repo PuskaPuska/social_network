@@ -1,0 +1,4 @@
+DB_URL= jdbc:mysql://172.17.0.2:3306/ay_social
+JDBC_DRIVER= com.mysql.jdbc.Driver
+DB_USERNAME= root
+DB_PASSWORD= ay_1
